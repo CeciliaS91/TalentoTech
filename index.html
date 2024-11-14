@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/99.9.8843.88';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll','0':{'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociate</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/imagenes/logo.jpg" alt="Logo de Empresa XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./pages/clubes.html">Clubes</a></li>
+                <li><a href="./pages/reseñas.html">Reseñas</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Asociate</h1>
+            <p>Somos la primer pagina web que te permite asociarte al club que elijas en segundos. </p>
+            <button onclick="mostrarMensaje()">Formulario</button>
+        </section>
+        <section class="articles">
+            <article class="article">
+                <h2>CLUBES</h2>
+                <p>Elegi entre nuestra lista de +100 de clubes para asociarte. <a href="./pages/clubes.html">Leer más</a></p>
+            </article>
+            <article class="article">
+                <h2>VISION</h2>
+                <p>Enterate de nuestra historia y que nos motivo a armar este proyecto. <a href="#">Leer más</a></p>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container"> 
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Politica de Privacidad</a></li>
+                            <li><a href="#">Registrate</a></li>
+                        </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Medios de pago</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Compromiso con clubes</a></li>
+                        </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Redes</h4>
+                        <div class="social-link">
+                            <a href="#" target="_blank"> <i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank"> <i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank"> <i class="fab fa-instagram"></i></a>
+                        </div>
+                </div> 
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

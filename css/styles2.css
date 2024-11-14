@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    padding-bottom: 70px;
+    min-height: 100vh;
+    background-color: #fad9d8;
+}
+
+/* Estilo de la barra de navegación */
+header {
+    background-color: brown;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Alinea el logo y la navegación en los extremos */
+    align-items: center; /* Centra verticalmente los elementos en la barra de navegación */
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilo del logo */
+.logo {
+    max-height: 61px; /* Establece una altura máxima para el logo */
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo dentro de su contenedor */
+}
+
+.logo img {
+    height: 100%; /* Establece la altura del logo al 100% de su contenedor */
+    margin-left: 5px; /* Espaciado entre el logo y la navegación */
+}
+
+/* Otros estilos de la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    color: #FF5733; /* Cambia el color al pasar el mouse por encima */
+}
+/* Estilo de la sección de contacto */
+/* Estilos para el diseño de la página */
+        .contact {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten en una fila cuando el espacio es insuficiente */
+            justify-content: space-between;
+            align-items: flex-start;
+           
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .map {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 100%; /* Para asegurarse de que el mapa no exceda el tamaño del contenedor */
+            overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
+        }
+
+        .map iframe {
+            width: 100%; /* Hace que el iframe ocupe el 100% del ancho del contenedor */
+            height: 100%; /* Hace que el iframe ocupe el 100% de la altura del contenedor */
+        }
+
+        /* Estilos para la sección de contacto */
+        .contact-info h1,
+        .contact-form h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .contact-form form {
+            max-width: 400px;
+        }
+
+        .contact-form label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="club"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .botonConfi {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .botonConfi:hover {
+            background-color: #ff5537;
+            color: black;
+        }
+footer{
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    width: 100%;
+}
+.social-nav{
+    background-color: brown;
+    padding: 3px;
+    text-align: center;
+    }
+.social-nav a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: darkred;
+    margin: 0 10px 2px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+}
+.social-nav a:hover{
+    background-color: lightblue;
+}
+
+@media(max-width:1060px){
+    .reseña-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .reseña-box{
+        width:100%;
+    }
+    .reseña-box h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-bottom: 10px;
+    }
+}
