@@ -64,7 +64,7 @@ main {
 }
 
 .hero {
-    background-image: url(../imagenes/fondo.jpj.jpg);
+    background-image: url(/imagenes/fondo.jpj.jpg);
     background-size: cover;
     color: #fff;
     padding: 200px;
