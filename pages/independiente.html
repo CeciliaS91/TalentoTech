@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles5.css">
+    
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/styles5.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <title>Independiente</title>
 </head>
 <body>
@@ -15,80 +24,117 @@
             <h1 class="titulo">INDEPENDIENTE </h1>
             <img class="logo" src="../imagenes/diablos logo.jpg" alt="logo">
         </div>
-        <nav class="contenedorIzquierdo">
-                <a href="../index.html" class="inicio">Inicio</a>
-        </nav>
-    </header>
-    <!--Se modificó el diseño con respecto al sketch para que el container con fotos esté solo y marque una separación de página-->
-    <section class="fotos">
-        <div id="independienteImg" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../imagenes/escudo.jpg" class="d-block w-100 d-img" alt="slider 1">
-                    <div class = "carousel-caption top-0 mt-5">
-                        <h1 class = "display-3 fw-bolder text-capitalize"> 
-                            REY DE COPAS
-                        </h1>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagenes/saludo4.jpg" class="d-block w-100 d-img" alt="slider 2">
-                    <div class = "carousel-caption top-0 mt-5">
-                        <h1 class = " display-3 fw-bolder text-capitalize"> 
-                            REY DE COPAS
-                        </h1>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagenes/libertadores.jpg" class="d-block w-100 d-img" alt="slider 3">
-                    <div class = "carousel-caption top-0 mt-5">
-                        <h1 class = " display-3 fw-bolder text-capitalize"> 
-                            REY DE COPAS
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   
-    <section class="informacion">
-        <!--los tres divs comparten sección, se podría mejorar el menu para que aparezcan en una unica opcion de menu-->
-        <div class="historia" id="historia">
-            <h1 class = "display-4 fw-bolder text-capitalize" >HISTORIA</h1>
-            <p>
-                Fundado el 1 de enero de 1905 por unos jóvenes empleados independentistas del Club Maipú(...)
-            </p>
-            <i>
-                "«¡Qué Atlanta ni ocho cuartos! ¡Nosotros tenemos que tener un club independiente!" 
-            </i>
-            <p>exclamó alguno en esa desprolija y fervorosa asamblea improvisada. 
-            <i>"Ahí está el nombre: ¡Independiente! Nos llamaremos Independiente"» 
-            </i>
-            <p>- gritó Rosendo Degiorgi.
-            </p>
-        </div>
-        
-            <div id="socios" class="list-group">
-                    <li class="list-group-item list-group-item-action bg-light fw-bolder">CATEGORIAS ::: VALOR INGRESO</li>
-                    <li class="list-group-item list-group-item-action bg-danger bg-opacity-75">Activo / Activa ::: $22000</li>
-                    <li class="list-group-item list-group-item-action bg-danger bg-opacity-50">Cadete ::: $15000</li> 
-                    <li class="list-group-item list-group-item-action bg-danger bg-opacity-25">Infantil ::: $8300</li>    
-                    <li class="list-group-item list-group-item-action bg-danger bg-opacity-10">Activo / Activa Patrimonial ::: $12500</li>  
-                <li class="list-group-item list-group-item-action bg-danger">Cadete Patrimonial ::: $9000</li>    
-                <li class="list-group-item list-group-item-action bg-danger bg-opacity-75">Infantil Patrimonial ::: $5650</li>
-                <li class="list-group-item list-group-item-action bg-danger bg-opacity-50">Activo / Activa Interior ::: $12500</li>
-                <li class="list-group-item list-group-item-action bg-danger bg-opacity-25">Cadete Interior ::: $9000</li>
-                <li class="list-group-item list-group-item-action bg-danger bg-opacity-10">Infantil Interior ::: $5500</li>
-            </div>
 
-            <div class="cancha" id="cancha">
-                <img src="../imagenes/cancha.jpg">
+        <nav class="navbar  navbar-expand-lg bg-body-tertiary "> <!--"contenedorIzquierdo"-->
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>     
+                </ul>
+              </div>
             </div>
-        
-    </section>
-    
-    <!--Este dl tiene que aparecer al final de la pagina siempre, revisar luego-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+          </nav>
+
+          <div class="container-icon">
+            <div class="container-cart-icon">
+                <img class="carritoImg" src="/imagenes/carrito-de-compras.png" alt="carrito compras">
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+          
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito"> 1 </span>
+                            <p class="titulo-producto-carrito">Remera Independiente</p>
+                            <span class="precio-producto-carrito">$35.000</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                     </div>  
+                </div>
+
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$50.000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="productosComprar">
+        <h1>Productos</h1>
+        <div class="contenedorCarrito" id="contenedorCarrito">
+            <div class="item">
+                <figure>
+                    <img src="../imagenes/camperaRojo.jpg" alt="producto 1">
+                </figure>
+                <div class="informacion">
+                    <h2>CAMPERA INDEPENDIENTE</h2>
+                    <p class="precio">$35000</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="../imagenes/camisetaRojo.jpg" alt="producto 2">
+                </figure>
+                <div class="informacion">
+                    <h2>CAMISETA INDEPENDIENTE</h2>
+                    <p class="precio">$30000</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="../imagenes/shorRojo.jpeg" alt="producto 3">
+                </figure>
+                <div class="informacion">
+                    <h2>SHORT INDEPENDIENTE</h2>
+                    <p class="precio">$40000</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="item">
+            <figure>
+                <img src="../imagenes/camperaRojo.jpg" alt="producto 4">
+            </figure>
+            <div class="informacion">
+                <h2>BUZO INDEPENDIENTE</h2>
+                <p class="precio">$35000</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="../imagenes/camisetaRojo.jpg" alt="producto 5">
+            </figure>
+                <div class="informacion">
+                <h2>CAMISETA INDEPENDIENTE</h2>
+                <p class="precio">$30000</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="../imagenes/shorRojo.jpeg" alt="producto 6">
+            </figure>
+                <div class="informacion">
+                <h2>SHORT INDEPENDIENTE</h2>
+                <p class="precio">$40000</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer class="footer">
         <div class="container"> 
@@ -122,7 +168,18 @@
         </div>
     </div>
     </footer>
-    <script src="../js/script.js"></script>
+    
     <script src="../js/main.js"></script>
+    <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
 </body>
 </html>

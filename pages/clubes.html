@@ -3,25 +3,56 @@
     <head>
         <meta charset="UTF-8" />
         <title>clubes</title>
-        <link rel="stylesheet" href="../css/styles4.css">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="../css/styles2.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
          
     <body>
             
+
         <header>
-            <div class="logo">
-                <img src="../imagenes/logo.jpg" alt="Logo de Empresa XYZ">
+            <div class="contenedorLogo">
+                <img class="logo" src="../imagenes/logo.jpg" alt="logo">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/clubes.html">Clubes</a></li>
-                    <li><a href="../pages/reseñas.html">Reseñas</a></li>
-                    <li><a href="../pages/contacto.html">Contacto</a></li>
+    
+            <nav class="navbar navbar-expand-lg "> <!--"contenedorIzquierdo"-->
+                <div class="container-fluid">
                     
-                </ul>
-            </nav>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                  <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../pages/clubes.html">Clubes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../pages/reseñas.html">Reseñas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+    
+              <img class="carritoImg" src="/imagenes/carrito-de-compras.png" alt="carrito compras">
+    
         </header>
+
+
+
         <main>
             <div class="container">
                 <h2 class="heading"> Clubes</h2>
@@ -31,45 +62,81 @@
                     <div class="box">
                         <img src="../imagenes/clubCAI.png">
                         <h3>Club Atletico Independiente</h3>
-                        <a href="../pages/independiente.html" class="btn">ASOCIATE</a>
+                        <a href="../pages/independiente.html" class="btn">COMPRAR</a>
                     </div>
                     <div class="box">
                         <img src="../imagenes/clubRiver.png">
                         <h3>Club Atletico River Plate</h3>
-                        <a href="#" class="btn">ASOCIATE</a>
+                        <a href="#" class="btn">COMPRAR</a>
                     </div>
                     <div class="box">
                         <img src="../imagenes/clubChacarita.png">
                         <h3>Club Atletico Chacarita Juniors</h3>
-                        <a href="#" class="btn">ASOCIATE</a>
+                        <a href="#" class="btn">COMPRAR</a>
                     </div>
                     <div class="box">
                         <img src="../imagenes/clubBoca.png">
                         <h3>Club Atletico Boca Juniors</h3>
-                        <a href="#" class="btn">ASOCIATE</a>
+                        <a href="#" class="btn" onclick="mensajeClubes()">COMPRAR</a>
                     </div>
                    <div class="box">
                         <img src="../imagenes/clubSanLorenzo.png">
                         <h3>Club Atletico San Lorenzo</h3>
-                        <a href="#" class="btn">ASOCIATE</a>
+                        <a href="#" class="btn" onclick="mensajeClubes()">COMPRAR</a>
                     </div>
                     <div class="box">
                         <img src="../imagenes/clubNueva.png">
                         <h3>Club Atletico Nueva Chicago</h3>
-                        <a href="#" class="btn">ASOCIATE</a>
+                        <a href="#" class="btn" onclick="mensajeClubes()">COMPRAR</a>
                     </div>
                 </div>    
             </div>
-            <footer>
-            <nav class="social-nav">
-                <a href="#" target="_blank"> <i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"> <i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"> <i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"> <i class="fab fa-instagram"></i></a>
-            </nav>
-    </footer>
         </main> 
-        <script src="../js/script.js"></script>
+
+
+        <footer class="footer">
+            <div class="contenedor"> 
+                <div class="footer-row">
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                            <ul>
+                                <li><a href="#">Nosotros</a></li>
+                                <li><a href="#">Servicios</a></li>
+                                <li><a href="#">Politica de Privacidad</a></li>
+                                <li><a href="#">Registrate</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Ayuda</h4>
+                            <ul>
+                                <li><a href="#">Medios de pago</a></li>
+                                <li><a href="#">Preguntas frecuentes</a></li>
+                                <li><a href="#">Compromiso con clubes</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Redes</h4>
+                            <div class="social-link">
+                                <a href="#" target="_blank"> <i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"> <i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"> <i class="fab fa-instagram"></i></a>
+                            </div>
+                    </div> 
+                </div>
+            </div>
+        </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/script.js"></script>
         
     </body>
 </html>
