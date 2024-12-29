@@ -1,4 +1,12 @@
 /* Reset de estilos para quitar márgenes y rellenos predeterminados */
+:root{
+    /* Media Querys */
+	--breakpoint-mobile-large: 480px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-desktop: 1024px;
+}
+
+
 *{
     font-family: "Playfair Display", serif;
     margin: 0;
@@ -14,28 +22,43 @@
   font-style: normal;
 }
 body {
-    
+    display: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
     background-color: #fad9d8 ;
-    position: relative;
-    padding-bottom: 200px;
+    /*position: relative;
+    padding-bottom: 200px;*/
     min-height: 100vh;
 }
 
 /* Estilo de la barra de navegación */
-header {
+
+header{
+    
+    width: 100%;
+    z-index: 9999;
+}
+.header-wrap{
     background-color: brown;
     font: #fff;
     display: flex;
     justify-content: space-between;  /*Alinea el logo y la navegación en los extremos */
     align-items: center;  /*Centra verticalmente los elementos en la barra de navegación */
+    z-index: 999;
 }
 
 /* Estilo del logo */
 .contenedorLogo{
     display: flex;
-    align-items: left;
+    align-items: center;
     padding: 2px;
+    flex-basis: 15%;
     box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    
 }
 
 .nav-link{
@@ -63,16 +86,24 @@ header {
 
 .container{
     
-    max-width: 1200px;
-    margin: 0 auto;
+    /*max-width: 1200px;
+    margin: 0 auto;*/
    
  } 
  .footer{
      background-color: brown;
+     position: relative;
+     /*position: absolute;
     height: 200px;
-     padding: 5px;
-     position: absolute;
-     bottom:0;
+     padding: 5px;*/
+     min-height: 100px;
+     padding: 20px 50px;
+     display: flex;
+     justify-content: center;
+     justify-content: center;
+     flex-direction: column;
+     
+     /*bottom:0;*/
      width: 100%;
     
      
@@ -218,6 +249,23 @@ button:hover {
     color: #FF5733;
 }
 
+
+
+@media (max-width:480px){
+    .hero{
+        padding: 50px;
+    }
+    .hero h1{
+
+    }
+    
+}
+@media (max-width:768px){
+    .hero{
+        padding: 80px;
+    }
+}
+
 /*---------PAGINA CONTACTO-------*/
 
 /* Estilo de la sección de contacto */
@@ -328,6 +376,12 @@ button:hover {
 .botonConfi:hover {
     background-color: #ff5537;
     color: black;
+}
+
+@media (max-width: 480px){
+    .contact{
+        display: inline-block;
+    }
 }
 
 /*---------PAGINA RESEÑAS-------*/

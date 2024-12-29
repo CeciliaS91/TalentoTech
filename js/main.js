@@ -1,127 +1,99 @@
-function mostrarMensaje() {
-    alert('¡Hola! Ante cualquier duda, completa nuestro formulario de contacto.');
-}
 
-window.onscroll = function(){
-    if(document.documentElement.scrollTop>100){
-        document.querySelector('.go-top-container')
-        .classList.add('show');
-    } else{
-        document.querySelector(".go-top-container")
-        .classList.remove("show");
-    }
-}
-document.querySelector('.go-top-container')
-.addEventListener('click',()=>{
-    window.scrollTo({
-        behavior:'smooth',
-        top:0,
-    });
+/*Carrito de compras */
+
+let cart = [];
+let precio = 0;
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+   const button = card.querySelector('button');
+   const productTitle = card.querySelector('h3').textContent;
+   const productPrice =  card.querySelector('p:last-child').textContent.slice(1);
+  
+   
+   button.addEventListener('click', () => {
+      const product = {
+         title: productTitle,
+         price: productPrice,
+         cantidad: 1
+      };
+      
+      cart.push(product);
+      precio += parseFloat(product.price);
+      
+      localStorage.setItem('productos', JSON.stringify(cart));
+      localStorage.setItem('total', precio);
+      
+      document.getElementsByClassName('count')[0].innerText = cart.length;
+      
+      console.log('Producto cargado en carrito: ', cart);
+      alert('Producto agregado al carrito!');
+   });
 });
 
 
+function handleCart() {
+   const cart = JSON.parse(localStorage.getItem('productos')) || [];
+   const total = localStorage.getItem('total') || 0;
 
-/*Carro display*/
-const btnCart = document.querySelector('.container-cart-icon')
-const containerCartProducts=document.querySelector('.container-cart-products')
+   const carritoContainer = document.getElementById('itemProducts');
+   
+   if (cart.length === 0) {
+      carritoContainer.innerHTML = '<p>No hay productos en el carrito.</p>';
+      return;
+   }
+   
+   const tabla = document.createElement('table');
+   tabla.classList.add('table'); 
 
-btnCart.addEventListener('click',()=>{
-    containerCartProducts.classList.toggle('hidden-cart')
-})
+   let encabezado = `
+     <thead>
+       <tr>
+         <th>Producto</th>
+         <th>Cantidad</th>
+         <th>Precio</th>
+       </tr>
+     </thead>
+   `;
 
+   let cuerpo = '<tbody>';
+   cart.forEach(producto => {
+      cuerpo += `
+       <tr>
+         <td>${producto.title}</td>
+         <td>${producto.cantidad}</td>
+         <td>$${producto.price}</td>
+       </tr>
+     `;
+   });
 
-/*Carrito de compras */
-const cartInfo = document.querySelector('.cart-product')
-const rowProduct = document.querySelector('.row-product')
+   cuerpo += '</tbody>';
+   
+   tabla.innerHTML = encabezado + cuerpo;
+   
+   carritoContainer.appendChild(tabla);
 
-// lista de todos los contenedores de productos 
-const productsList = document.querySelector('.contenedorCarrito')
+   let precioFinal = document.createElement('p')
+   precioFinal.innerText = `Total a pagar: $${total}`;
 
-//variable de arreglos de productos
-let allProducts = []
-const valorTotal = document.querySelector('.total-pagar');
-const countProducts = document.querySelector('#contador-productos')
+   carritoContainer.appendChild(precioFinal);
 
+}
 
-
-productsList.addEventListener('click', e => {
-    if (e.target.classList.contains('btn-add-cart')){
-        const product = e.target.parentElement
-        const infoProduct = {
-            quantity: 1,
-            title: product.querySelector('h2').textContent,
-            price: product.querySelector('p').textContent,
-    };
-
-    const exits = allProducts.some(product => product.title === infoProduct.title)
-
-    if (exits){
-        const products = allProducts.map(product => {
-            if(product.title === infoProduct.title){
-                product.quantity++;
-                return product
-            }else{
-                return product
-            }
-        })
-        allProducts = [...products];
-    }else {
-        allProducts = [...allProducts,infoProduct]
+function limpiarCarrito() {
+   if (confirm("¿Estás seguro de que deseas vaciar el carrito?")) {
+      cart = [];
+      precio = 0;
+  
+      const carritoContainer = document.getElementById('itemProducts');
+      carritoContainer.innerHTML = '';
+  
+      localStorage.removeItem('productos');
+      localStorage.removeItem('total');
+  
+      document.getElementsByClassName('count')[0].innerText = 0;
     }
+}
 
-    showHTML();
-    }
-})
-
-rowProduct.addEventListener('click',(e)=>{
-    if (e.target.classList.contains('icon-close')){
-        const product = e.target.parentElement;
-        const title = product.querySelector('p').textContent;
-
-        allProducts = allProducts.filter( product => product.title !== title);
-
-        console.log(allProducts)
-        showHTML()
-    }
-})
-
-
-
-//funcion para mostrar html
-const showHTML = () => {
-
-
-    if (!allProducts.length){
-        containerCartProducts.innerHTML= `
-        <p class="cart-empty">El carrito está vacío.</p>`
-    }
-
-    //limpiar html
-    rowProduct.innerHTML = '';
-
-    let total = 0;
-    let totalOfProducts = 0;
-
-    allProducts.forEach(product => {
-        const containerProduct = document.createElement('div')
-        containerProduct.classList.add('cart-product')
-
-        containerProduct.innerHTML = 
-        `<div class="info-cart-product"> 
-            <span class="cantidad-producto-carrito"> ${product.quantity} </span> 
-            <p class="titulo-producto-carrito">${product.title}</p>
-            <span class="precio-producto-carrito">${product.price}</span>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg> `
-
-          rowProduct.append(containerProduct);
-
-          total = total + parseInt(product.quantity * product.price.slice(1))
-          totalOfProducts=totalOfProducts + product.quantity;
-    });
-    
-    valorTotal.innerText = `$${total}`
-    countProducts.innerText = totalOfProducts;
- }
+window.onload = handleCart;

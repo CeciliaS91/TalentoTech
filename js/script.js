@@ -7,16 +7,25 @@ function mensajeClubes() {
 }
 
 
-const header = document.querySelector("#header");
-const contenedor = document.querySelector("#contenedorCarrito");
-const body = document.querySelector("body");
+function mostrarMensaje() {
+    alert('¡Hola! Ante cualquier duda, completa nuestro formulario de contacto.');
+}
 
-window.addEventListener("scroll",function(){
-    if(contenedor.getBoundingClientRect().top<10){
-        header.classList.add("scroll")
+window.onscroll = function(){
+    if(document.documentElement.scrollTop>100){
+        document.querySelector('.go-top-container')
+        .classList.add('show');
+    } else{
+        document.querySelector(".go-top-container")
+        .classList.remove("show");
     }
-    else{
-        header.classList.remove("scroll")
-    }
-})
+}
+document.querySelector('.go-top-container')
+.addEventListener('click',()=>{
+    window.scrollTo({
+        behavior:'smooth',
+        top:0,
+    });
+});
+
 
