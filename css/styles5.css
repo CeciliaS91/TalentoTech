@@ -8,19 +8,24 @@
 }
 
 body{
+    display: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
     background-color:  #fad9d8;
-    position: relative;
-    padding-bottom: 145px;
+    min-height: 100vh;
+    /*position: relative;
+    padding-bottom: 145px;*/
 }
 html{
     scroll-behavior: smooth;
 }
-header {
+.header-wrap {
     display: flex;
     justify-content: space-between; /* Alinea el logo y la navegación en los extremos */
     align-items: center;
     background-color: rgb(222, 32, 32);
     border-style: solid;
+    width: 100%;
     
  }
  .nav-link{
@@ -265,16 +270,24 @@ h2{
 
 
 /* Caracteristicas del footer */
-.contenedorFooter{
-   max-width: 1200px;
-    margin: 0 auto;
-} 
+
 .footer1{
     background-color: brown;
-    padding: 5px;
+    /*padding: 5px;
     position: absolute;
     bottom:0;
-    width: 100%;
+    width: 100%;*/
+    position: relative;
+     min-height: 100px;
+     padding: 20px 50px;
+     display: flex;
+     justify-content: center;
+     justify-content: center;
+     flex-direction: column;
+     
+     /*bottom:0;*/
+     width: 100%;
+
 }
 .footer2{
     background-color: brown;
@@ -452,7 +465,9 @@ h2{
     .parrafo:hover{
         transform: translate(0px);
         }
-    
+    header{
+        width: 550px;
+    }
     
     .container{
         display: inline-block;
@@ -474,5 +489,30 @@ h2{
     .btn-limpiar{
         border-radius: 10px;
     }
+    .footer1{
         
+        gap: 10px;
+        padding: 5px; 
+        width: 550px;
+     }
+     .footer-row{
+        flex-direction: column;
+     }
+     .footer-links{
+         width: 35%;
+         padding: 0 5px;
+         flex-direction: row;
+     }
+     .footer-links h4{
+         font-size: 15px;
+     }
+     .footer-links ul li a {
+         font-size: 15px;
+     }
+    .footer2{
+        position: relative;
+        gap: 10px;
+        padding: 5px; 
+        width: 550px;
+    }
  }
