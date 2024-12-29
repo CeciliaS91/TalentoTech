@@ -158,11 +158,13 @@ main {
 }
 
 .hero {
-    background-image: url(.../imagenes/fondo.jpg);
+    background-image: url(../imagenes/fondo.jpg);
     background-size: cover;
     color: #fff;
     padding: 200px;
     display: inline-block;
+    border: #ff5537 5px dotted;
+    border-radius: 10px;
 }
 
 .hero h1 {
