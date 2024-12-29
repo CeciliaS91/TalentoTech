@@ -96,4 +96,15 @@ function limpiarCarrito() {
     }
 }
 
+function finalizar() {
+   if (confirm("¿Esta seguro que quiere finalizar la compra?")) {
+      cart = [];
+      precio = 0;
+  
+      const carritoContainer = document.getElementById('itemProducts');
+      carritoContainer.innerHTML = '';
+  
+      document.getElementsByClassName('count')[0].innerText = 0;
+    }
+}
 window.onload = handleCart;
